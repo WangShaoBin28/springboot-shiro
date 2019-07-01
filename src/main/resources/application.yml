@@ -1,0 +1,26 @@
+spring:
+  freemarker:
+    suffix: .ftl
+    cache: false
+    charset: UTF-8
+    template-loader-path: classpath:/templates/
+    expose-request-attributes: true
+    expose-session-attributes: true
+    content-type: text/html
+    request-context-attribute: request
+    enabled: true
+    settings:
+      classic_compatible: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot_shiro?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
